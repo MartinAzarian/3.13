@@ -1,4 +1,4 @@
-package com.company;
+ package com.company;
 
 import java.util.ArrayList;
 
@@ -37,16 +37,11 @@ public class Main {
 
     }
 
-    public ArrayList<Integer> swapTwoElements(ArrayList<Integer> arrayList, int index1, int index2) {
-        int element1 = arrayList.get(index1);
-        int element2 = arrayList.get(index2);
-        element1 = element1 * element2;
-        element2 = element1 / element2;
-        element1 = element1 / element2;
+    public ArrayList<Integer> joinArrayList(ArrayList<Integer> arrayList1, ArrayList<Integer> arrayList2) {
+        ArrayList<Integer> joinArrayList = new ArrayList<>();
+        joinArrayList.addAll(arrayList1);
+        joinArrayList.addAll(arrayList2);
 
-        arrayList.set(index1, element1);
-        arrayList.set(index2, element2);
-
-        return arrayList;
+        return joinArrayList;
     }
 }
